@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Frecuentes - ER Elegance Resorts</title>
+    <link rel="shortcut icon" href="./image/ER Logo.jpg" type="image/svg+xml">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f4f4f9;
+            line-height: 1.6;
+        }
+        h1 {
+            background-color: #2a2a72;
+            color: #ffffff;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+        .faq-section {
+            background-color: #ffffff;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .faq-section:hover {
+            transform: translateY(-5px);
+        }
+        .faq-header {
+            padding: 1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #2a2a72;
+            color: #ffffff;
+            border-radius: 8px 8px 0 0;
+        }
+        .faq-header h2 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+        .faq-header::after {
+            content: '\25BC';
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+        .faq-header.active::after {
+            transform: rotate(180deg);
+        }
+        .faq-content {
+            padding: 1rem;
+            display: none;
+            background-color: #f4f4f9;
+            border-top: 1px solid #dcdcdc;
+        }
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            color: #777;
+            font-size: 0.9em;
+            padding: 1rem;
+            background-color: #2a2a72;
+            color: #ffffff;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const faqs = document.querySelectorAll(".faq-section");
+            faqs.forEach(faq => {
+                const header = faq.querySelector(".faq-header");
+                header.addEventListener("click", function() {
+                    const content = faq.querySelector(".faq-content");
+                    const isOpen = content.style.display === "block";
+                    
+                    // Reset all sections
+                    document.querySelectorAll(".faq-content").forEach(c => c.style.display = "none");
+                    document.querySelectorAll(".faq-header").forEach(h => h.classList.remove("active"));
+
+                    // Toggle the current one
+                    content.style.display = isOpen ? "none" : "block";
+                    header.classList.toggle("active", !isOpen);
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Preguntas Frecuentes</h1>
+    
+    <div class="container">
+        <div class="faq-section">
+            <div class="faq-header">
+                <h2>1. ¿Qué tipo de viajes ofrece ER Elegance Resorts?</h2>
+            </div>
+            <div class="faq-content">
+                <p>Ofrecemos una amplia gama de paquetes turísticos, que incluyen destinos nacionales e internacionales. Desde escapadas relajantes en playas exóticas hasta aventuras culturales y expediciones en el extranjero, diseñamos viajes para satisfacer diferentes intereses y presupuestos.</p>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <div class="faq-header">
+                <h2>2. ¿Cómo puedo reservar un viaje con ER Elegance Resorts?</h2>
+            </div>
+            <div class="faq-content">
+                <p>Puede reservar un viaje directamente a través de nuestro sitio web, llamando a nuestro número de contacto o visitando nuestras oficinas. Nuestro equipo de expertos en viajes estará encantado de ayudarle a seleccionar el paquete adecuado para usted.</p>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <div class="faq-header">
+                <h2>3. ¿Qué formas de pago aceptan?</h2>
+            </div>
+            <div class="faq-content">
+                <p>Aceptamos pagos a través de tarjetas de crédito y débito, transferencias bancarias, y PayPal. También ofrecemos opciones de financiamiento en colaboración con bancos seleccionados.</p>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <div class="faq-header">
+                <h2>4. ¿Puedo personalizar mi paquete de viaje?</h2>
+            </div>
+            <div class="faq-content">
+                <p>¡Sí! Ofrecemos opciones de personalización para que pueda adaptar su viaje a sus preferencias y necesidades específicas. Ya sea que desee añadir actividades adicionales, elegir diferentes fechas o modificar su alojamiento, nuestro equipo trabajará con usted para crear el viaje perfecto.</p>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <div class="faq-header">
+                <h2>5. ¿Cuál es su política de cancelación?</h2>
+            </div>
+            <div class="faq-content">
+                <p>Nuestra política de cancelación varía según el tipo de servicio y proveedor. Recomendamos revisar los términos específicos en su confirmación de reserva. En general, ofrecemos reembolsos parciales o completos, dependiendo de la antelación con la que se realice la cancelación.</p>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <div class="faq-header">
+                <h2>6. ¿Qué medidas de seguridad y salud están implementadas durante los viajes?</h2>
+            </div>
+            <div class="faq-content">
+                <p>Nos comprometemos a garantizar la seguridad y el bienestar de nuestros clientes. Seguimos todas las directrices de salud pública y trabajamos con proveedores de confianza que cumplen con los estándares de seguridad e higiene. También ofrecemos seguros de viaje que incluyen cobertura médica.</p>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 ER Elegance Resorts. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
